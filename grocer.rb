@@ -20,6 +20,7 @@ def apply_coupons(cart, coupons)
   newListA = cart
   
   coupons.each do |itemA|
+    binding.pry
     itemName = itemA[1]
     
     if newListA[itemName] != nil &&  newListA[itemName][:count] > coupons[:num]
