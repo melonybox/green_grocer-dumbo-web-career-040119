@@ -29,7 +29,7 @@ def apply_coupons(cart, coupons)
       tempItem = {tempKey => {:price => coupons[:cost], :clearence => newListA[itemName][:clearance], :count => tempVal}}
       
       if newListA[tempKey] == nil
-        newListA.merge!(tempItem)
+        tempItem.merge!(newListA)
       end       
     end
   end
