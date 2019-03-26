@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
   
   coupons.each do |itemA|
     binding.pry
-    itemName = itemA[1]
+    itemName = itemA[:item]
     
     if newListA[itemName] != nil &&  newListA[itemName][:count] > coupons[:num]
       tempVal = newListA[itemName][:count] / coupons[:num]
