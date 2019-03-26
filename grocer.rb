@@ -25,6 +25,7 @@ def apply_coupons(cart, coupons)
     if newListA[itemName] != nil &&  newListA[itemName][:count] > coupons[:num]
       tempVal = newListA[itemName][:count] / coupons[:num]
       newListA[itemName][:count] -= coupons[:num]
+      newListA[itemName][:price] = coupons[:cost]
       tempKey = "#{itemName} W/COUPON"
       tempItem = {tempKey => {:price => coupons[:cost], :clearence => newListA[itemName][:clearance], :count => tempVal}}
       
